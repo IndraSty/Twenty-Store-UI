@@ -1,0 +1,55 @@
+name: twenty_store
+description: "A new Flutter project."
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.4.3 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+  flutter_screenutil: 
+  flutter_dotenv: 
+  flutter_vector_icons: 
+  cross_connectivity: 
+  google_fonts: 
+  flutter_rating_bar: 
+  shimmer: 
+  provider: 
+  flutter_image_slideshow: 
+  cached_network_image: 
+  flutter_svg: 
+  flutter_hooks: 
+  flutter_staggered_grid_view:
+  go_router: 
+  get_storage:
+  page_view_dot_indicator:
+  flutter_otp_text_field: 
+  webview_flutter_android:
+  webview_flutter:
+  webview_flutter_wkwebview: 
+  webview_universal:
+  google_maps_flutter:
+  get_time_ago:
+  firebase_messaging: 
+  flutter_local_notifications:
+  firebase_core:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - .env.development
+    - .env.production
