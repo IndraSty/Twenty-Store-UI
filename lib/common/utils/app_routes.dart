@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:twenty_store/src/auth/views/login_screen.dart';
+import 'package:twenty_store/src/categories/views/categories_page.dart';
+import 'package:twenty_store/src/categories/views/category_page.dart';
 import 'package:twenty_store/src/entrypoint/views/entrypoint.dart';
+import 'package:twenty_store/src/notification/views/notification_page.dart';
+import 'package:twenty_store/src/onboarding/views/on_boarding_screen.dart';
+import 'package:twenty_store/src/search/views/search_page.dart';
 import 'package:twenty_store/src/splash_screen/views/splashscreen_page.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
@@ -15,12 +21,12 @@ final GoRouter _router = GoRouter(
     ),
     GoRoute(
       path: '/home',
-      builder: (context, state) => const AppEntryPoint(),
+      builder: (context, state) => AppEntryPoint(),
     ),
-    // GoRoute(
-    //   path: '/onboarding',
-    //   builder: (context, state) => const OnBoardingScreen(),
-    // ),
+    GoRoute(
+      path: '/onboarding',
+      builder: (context, state) => const OnBoardingScreen(),
+    ),
     // GoRoute(
     //   path: '/review',
     //   builder: (context, state) => const ReviewsPage(),
@@ -33,10 +39,10 @@ final GoRouter _router = GoRouter(
     //   path: '/verification',
     //   builder: (context, state) => const VerificationPage(),
     // ),
-    // GoRoute(
-    //   path: '/search',
-    //   builder: (context, state) => const SearchPage(),
-    // ),
+    GoRoute(
+      path: '/search',
+      builder: (context, state) => const SearchPage(),
+    ),
     // GoRoute(
     //   path: '/help',
     //   builder: (context, state) => const HelpCenterPage(),
@@ -45,22 +51,22 @@ final GoRouter _router = GoRouter(
     //   path: '/orders',
     //   builder: (context, state) => const OrdersPage(),
     // ),
-    // GoRoute(
-    //   path: '/login',
-    //   builder: (context, state) => const LoginPage(),
-    // ),
+    GoRoute(
+      path: '/login',
+      builder: (context, state) => const LoginScreen(),
+    ),
     // GoRoute(
     //   path: '/register',
     //   builder: (context, state) => const RegistrationPage(),
     // ),
-    // GoRoute(
-    //   path: '/categories',
-    //   builder: (context, state) => const CategoriesPage(),
-    // ),
-    // GoRoute(
-    //   path: '/category',
-    //   builder: (context, state) => const CategoryPage(),
-    // ),
+    GoRoute(
+      path: '/categories',
+      builder: (context, state) => const CategoriesPage(),
+    ),
+    GoRoute(
+      path: '/category',
+      builder: (context, state) => const CategoryPage(),
+    ),
     // GoRoute(
     //   path: '/addaddress',
     //   builder: (context, state) => const AddAddress(),
@@ -69,10 +75,10 @@ final GoRouter _router = GoRouter(
     //   path: '/addresses',
     //   builder: (context, state) => const AddressesListPage(),
     // ),
-    // GoRoute(
-    //   path: '/notifications',
-    //   builder: (context, state) => const NotificationPage(),
-    // ),
+    GoRoute(
+      path: '/notifications',
+      builder: (context, state) => const NotificationPage(),
+    ),
     // GoRoute(
     //   path: '/tracking',
     //   builder: (context, state) => const TrackOrderPage(),
