@@ -37,13 +37,10 @@ class CustomAppBar extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 6.0),
-                child: SizedBox(
-                  width: ScreenUtil().scaleWidth,
-                  child: Text(
-                    "Please select location",
-                    maxLines: 1,
-                    style: appStyle(14, Kolors.kDark, FontWeight.w500),
-                  ),
+                child: Text(
+                  "Please select location",
+                  maxLines: 1,
+                  style: appStyle(14, Kolors.kDark, FontWeight.w500),
                 ),
               ),
             ],
@@ -66,48 +63,48 @@ class CustomAppBar extends StatelessWidget {
             ),
             child: Row(
               children: [
+                Container(
+                  height: 40.h,
+                  width: ScreenUtil().screenWidth - 80,
+                  padding: const EdgeInsets.all(8.0),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: .5,
+                      color: Kolors.kGrayLight,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Row(
+                    children: [
+                      const Icon(
+                        Ionicons.search,
+                        size: 20,
+                        color: Kolors.kPrimaryLight,
+                      ),
+                      SizedBox(
+                        width: 20.w,
+                      ),
+                      ReusableText(
+                        text: 'Search Product',
+                        style: appStyle(14, Kolors.kGray, FontWeight.w400),
+                      ),
+                    ],
+                  ),
+                ),
                 Padding(
                   padding: EdgeInsets.only(left: 6.w),
                   child: Container(
                     height: 40.h,
-                    width: ScreenUtil().screenWidth - 80,
-                    padding: const EdgeInsets.all(8.0),
+                    width: 40.w,
                     decoration: BoxDecoration(
-                      border: Border.all(
-                        width: .5,
-                        color: Kolors.kGrayLight,
-                      ),
-                      borderRadius: BorderRadius.circular(12),
+                      color: Kolors.kPrimary,
+                      borderRadius: BorderRadius.circular(9),
                     ),
-                    child: Row(
-                      children: [
-                        const Icon(
-                          Ionicons.search,
-                          size: 20,
-                          color: Kolors.kPrimaryLight,
-                        ),
-                        SizedBox(
-                          width: 20.w,
-                        ),
-                        ReusableText(
-                          text: 'Search Product',
-                          style: appStyle(14, Kolors.kGray, FontWeight.w400),
-                        ),
-                      ],
+                    child: const Icon(
+                      FontAwesome.sliders,
+                      color: Kolors.kWhite,
+                      size: 20,
                     ),
-                  ),
-                ),
-                Container(
-                  height: 40.h,
-                  width: 40.w,
-                  decoration: BoxDecoration(
-                    color: Kolors.kPrimary,
-                    borderRadius: BorderRadius.circular(9),
-                  ),
-                  child: const Icon(
-                    FontAwesome.sliders,
-                    color: Kolors.kWhite,
-                    size: 20,
                   ),
                 ),
               ],
