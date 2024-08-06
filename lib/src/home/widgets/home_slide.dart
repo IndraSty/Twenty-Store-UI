@@ -72,7 +72,3 @@ class HomeSlider extends StatelessWidget {
     );
   }
 }
-
-List<String> images = [
-  "https://d326fntlu7tble.cloudfront.net/uploads/1.webp",
-];
