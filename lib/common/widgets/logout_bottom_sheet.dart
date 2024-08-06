@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
-import 'package:provider/provider.dart';
-import 'package:twenty_store/common/services/storage.dart';
 import 'package:twenty_store/common/utils/kcolors.dart';
 import 'package:twenty_store/common/utils/kstrings.dart';
 import 'package:twenty_store/common/widgets/app_style.dart';
@@ -48,16 +45,16 @@ Future<dynamic> logoutBottomSheet(BuildContext context) {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  GradientBtn(
+                  CustomButton(
                     text: "Cancel",
                     borderColor: Kolors.kDark,
                     btnColor: Kolors.kWhite,
                     onTap: () => Navigator.pop(context),
-                    btnHieght: 35.h,
+                    btnHeight: 35.h,
                     radius: 16,
                     btnWidth: ScreenUtil().screenWidth / 2.2,
                   ),
-                  GradientBtn(
+                  CustomButton(
                     text: "Yes, Logout",
                     onTap: () {
                       // Storage().removeKey('accessToken');
@@ -65,7 +62,7 @@ Future<dynamic> logoutBottomSheet(BuildContext context) {
                       // context.go("/home");
                       // context.pop();
                     },
-                    btnHieght: 35.h,
+                    btnHeight: 35.h,
                     radius: 16,
                     btnWidth: ScreenUtil().screenWidth / 2.2,
                   ),
